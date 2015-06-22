@@ -9,7 +9,7 @@ This node.js app allows multiple people to draw on the same canvas in their brow
 
 ### How to Run
 
-To run this web application, simply `cd` to the containing directory and run `node paint_client.js` in your terminal. Optionally, you can specify a port using the command `node paint_client.js 0000` where 0000 is the desired port number. If none is specified, the default port 8080 will be used. Once started, simply visit [http://localhost:8080/](http://localhost:8080/) in your browser. If you chose to specify a different port number, please use that one instead.
+To run this web application, simply `cd` to the containing directory and run `node paint_server.js` in your terminal. Optionally, you can specify a port using the command `node paint_server.js 0000` where 0000 is the desired port number. If none is specified, the default port 8080 will be used. Once started, simply visit [http://localhost:8080/](http://localhost:8080/) in your browser. If you chose to specify a different port number, please use that one instead.
 
 ### Description
 
