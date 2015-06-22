@@ -7,11 +7,11 @@ This node.js app allows multiple people to draw on the same canvas in their brow
 
 ## App Specifications
 
-### How to Run
+### Setup Instructions
 
 To run this web application, simply `cd` to the containing directory and run `node paint_server.js` in your terminal. Optionally, you can specify a port using the command `node paint_server.js 0000` where 0000 is the desired port number. If none is specified, the default port 8080 will be used. Once started, simply visit [http://localhost:8080/](http://localhost:8080/) in your browser. If you chose to specify a different port number, please use that one instead.
 
-### Description
+### App Description
 
 In this simultaneous collaborative drawing application, the “canvas” is simply a table of cells, and each cell has a size of 3x3 pixels, with a background color property. The client detects mouse clicks/drags to appropriately assign the current Pen Color to each affected cell, and possibly to the cells around each clicked cell depending on the current Brush Size. The client sends an array of only changed cells (as opposed to all cells in the table) to the server when cells’ colors are changed, and also continuously “polls” the server for changes made by other clients. Unlike the client, the server sends the entire canvas (4,000 cells) back to each client during each “poll”.
 
@@ -78,7 +78,7 @@ There are essentially an infinite number of events sequences that can take place
   21.	(server) Server receives poll request and sends entire canvas to Stewie’s client.
   22.	(client) Stewie’s client receives canvas, and makes all changes Bob made that don’t match Stewie’s canvas.
 
-### Running the Program
+### How the App Works
 
 The server is initialized and sets serverFn to listen to url requests from the client. The first request will open index.html which runs the client-side load function. This function creates all of the html elements, including the table containing all the colored cells, and the selectors for brush color and brush size. Then, event listeners are added to the CanvasOverlay, which is a div overlaying the table that detects all clicks and drags of the mouse. The location of the mouse on the CanvasOverlay during a mouse click or drag is used to calculate which cell(s) in the table to change. During a mouse click or drag, all affected cells are pushed onto the clickedCells array.  When the user terminates the event with a “mouseup,” all of these affected cells are transferred in bulk from the clickedCells array into the changedCells array.
 
