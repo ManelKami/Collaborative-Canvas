@@ -1,5 +1,5 @@
-# App Design Final Project: Multi-User Drawing
-By Casey Hofford and Soeren Walls
+# Collaborative Canvas
+By Soeren Walls and Casey Hofford
 
 This node.js app allows multiple people to draw on the same canvas in their browser simultaneously.
 
